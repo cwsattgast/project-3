@@ -103,7 +103,8 @@ label::after {
   padding-bottom: .5rem;
 }
 
-input[id="name"],
+input[id="name_f"],
+input[id="name_l"],
 input[id="email"],
 input[id="phone"],
 input[id="street"],
@@ -148,10 +149,16 @@ input[type="checkbox"]:hover {
   background: #ddd;
 }
 
-::-webkit-input-placeholder,
-::-moz-placeholder,
-:-moz-placeholder,
-:-ms-input-placeholder {
+::-webkit-input-placeholder {
+  font-size: .7rem;
+  color: #bbb;
+  text-align: right;
+  font-weight: 300;
+  font-style: italic;
+  padding-right: 1rem;
+ }
+
+ :-moz-placeholder { /* older Firefox*/
   font-size: .7rem;
   color: #bbb;
   text-align: right;
@@ -159,6 +166,24 @@ input[type="checkbox"]:hover {
   font-style: italic;
   padding-right: 1rem;
 }
+
+::-moz-placeholder { /* Firefox 19+ */
+  font-size: .7rem;
+  color: #bbb;
+  text-align: right;
+  font-weight: 300;
+  font-style: italic;
+  padding-right: 1rem;
+}
+
+:-ms-input-placeholder {
+  font-size: .7rem;
+  color: #bbb;
+  text-align: right;
+  font-weight: 300;
+  font-style: italic;
+ padding-right: 1rem;
+ }
 
 select {
   height: 50px;
