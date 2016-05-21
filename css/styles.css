@@ -1,0 +1,289 @@
+/* CSS File for Responsive Newsletter Signup Form by Charlie Sattgast */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Merriweather', serif;
+  margin: 0;
+}
+
+h1 {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+p {
+  font-size: .875rem;
+  font-weight: 300;
+  color: #aaa;
+}
+
+hr {
+  height: 2px;
+  width: 100%;
+  border: 0;
+  background-color: #2d3945;
+  margin-bottom: 25px;
+}
+
+/* ---- Header Styling ---- */
+
+.headline {
+  background-color: #2d3945;
+  margin: 0 0 25px 0;
+  padding: 10px;
+  letter-spacing: .0625rem;
+}
+
+.headline h1 {
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.signup {
+  margin: 10px auto 20px;
+  text-align: center;
+}
+
+.doublerule {
+  display: inline-block;
+  width: 100%;
+  height: 4px;
+  background-color: #2d3945;
+  margin-top: 10px;
+}
+
+.doublerule::after {
+  content: "";
+  display: block;
+  margin-top: 7px;
+  width: 100%;
+  height: 2px;
+  background-color: #2d3945;
+}
+
+.wrapper {
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+/* ---- Form Styling ---- */
+
+form {
+  max-width: 320px;
+  margin: 10px auto;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  /*border: 1px solid #2d3945;*/
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+}
+
+legend {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+
+label {
+  color: #aaa;
+  font-size: .875rem;
+  font-weight: 300;
+}
+
+label::after {
+  content: "";
+  display: block;
+  padding-bottom: .5rem;
+}
+
+input[id="name"],
+input[id="email"],
+input[id="phone"],
+input[id="street"],
+input[id="city"],
+input[id="state"],
+input[id="zip"],
+input[id="tel"],
+input[id="time"],
+input[id="url"],
+textarea,
+select {
+  background: #eee;
+  border: none;
+  border-radius: 5px;
+  font-family: 'Merriweather', serif;
+  font-size: .875rem;
+  font-weight: 300;
+  height: auto;
+  margin: 0 0 20px 0;
+  outline: 0;
+  padding: 15px 0;
+  width: 100%;
+  color: #8a97a0;
+  text-indent: 1rem;
+}
+
+::-webkit-input-placeholder {
+  font-size: .7rem;
+  color: #bbb;
+  text-align: right;
+  font-weight: 300;
+  font-style: italic;
+  padding-right: 1rem;
+}
+:-moz-placeholder { /* older Firefox*/
+  font-size: .7rem;
+  color: #bbb;
+  text-align: right;
+  font-weight: 300;
+  font-style: italic;
+  padding-right: 1rem;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  font-size: .7rem;
+  color: #bbb;
+  text-align: right;
+  font-weight: 300;
+  font-style: italic;
+  padding-right: 1rem;
+}
+:-ms-input-placeholder {
+  font-size: .7rem;
+  color: #bbb;
+  text-align: right;
+  font-weight: 300;
+  font-style: italic;
+  padding-right: 1rem;
+}
+
+select {
+  height: 50px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1rem;
+  text-overflow: '';
+  background-image: url(../images/down-arrow.png);
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+/*---- Zip code box styling ----*/
+input[id="zip"] {
+  width: 50%;
+  margin-bottom: 10px;
+}
+
+input:hover[type="submit"] {
+background: #ffb6c1;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border: 2px solid #455769;
+  transition: border 0.5s ease;
+}
+
+[type="radio"],
+[type="checkbox"],
+[type="submit"] {
+  display: none;
+}
+
+[type="radio"] + label {
+  display: block;
+}
+
+/* ---- unchecked radio button--huge thanks to classmate Meg Matty! ---- */
+[type="radio"] + label:before {
+  content: '';
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+  border-radius: 50%;
+  border: 0;
+  background-color: #eee;
+  box-shadow: 0 0 0 0.15rem #eee;
+  margin-right: 12px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  transition: box-shadow 0.5s ease, background-color 0.5s ease;
+}
+
+/* ---- checked radio button ---- */
+[type="radio"]:checked + label:before {
+  border: 3px solid white;
+  background: #416588;
+  box-shadow: 0 0 0 0.15em #416588;
+  width: .5em;
+  height: .5em;
+}
+
+/* ---- unchecked checkbox ---- */
+[type="checkbox"] + label:before {
+  content: '';
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+  border-radius: 20%;
+  border: 0;
+  background-color: #eee;
+  box-shadow: 0 0 0 0.15rem #eee;
+  margin-right: 12px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  transition: box-shadow 0.5s ease, background-color 0.5s ease;
+}
+
+/* ---- checked checkbox ---- */
+[type="checkbox"]:checked + label:before {
+  content: url(../images/checkmark.png);
+  box-shadow: 0 0 0 0.15em #416588;
+  width: 1em;
+  height: 1em;
+}
+
+/* ---- submit button styling ---- */
+button[type="submit"] {
+  content: '';
+  display: inline-block;
+  width: 100%;
+  height: 60px;
+  vertical-align: middle;
+  border-radius: 6px;
+  border: 0;
+  background-color: #4ebbb5;
+  font-family: 'Merriweather', serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+
+/* ---- submit button hover ---- */
+button[type="submit"]:hover {
+  background-color: #3f9994;
+}
+
+.group {
+  padding-bottom: 20px;
+}
+
+/* ---- Footer Styling ---- */
+
+footer {
+  text-size: .875rem;
+  text-align: center;
+  font-style: italic;
+}
