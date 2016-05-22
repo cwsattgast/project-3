@@ -28,6 +28,12 @@ hr {
   margin-bottom: 25px;
 }
 
+.clearfix::after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
 
 /* ---- Header Styling ---- */
 
@@ -115,8 +121,8 @@ input[id="city"],
 input[id="state"],
 input[id="zip"],
 input[id="tel"],
-input[id="bday"],
-input[id="url"],
+input[id="username"],
+input[id="password"],
 textarea,
 select {
   background: #eee;
@@ -143,13 +149,17 @@ input[id="city"]:hover,
 input[id="state"]:hover,
 input[id="zip"]:hover,
 input[id="tel"]:hover,
-input[id="bday"]:hover,
-input[id="url"]:hover,
+input[id="username"]:hover,
+input[id="password"]:hover,
 textarea:hover,
 select:hover,
 input[type="radio"]:hover,
 input[type="checkbox"]:hover {
   background: #ddd;
+}
+
+.pw {
+  font-size: .7rem;
 }
 
 ::-webkit-input-placeholder {
@@ -363,4 +373,11 @@ textarea {
   max-width: 100%;
 }
 
+.pw {
+  font-size: .7rem;
+  width: 75%;
+  float: right;
 }
+
+}
+
