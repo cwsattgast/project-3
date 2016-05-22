@@ -28,6 +28,7 @@ hr {
   margin-bottom: 25px;
 }
 
+
 /* ---- Header Styling ---- */
 
 .headline {
@@ -70,10 +71,11 @@ hr {
   padding: 0 5%;
 }
 
+
 /* ---- Form Styling ---- */
 
 form {
-  max-width: 320px;
+  max-width: 500px;
   margin: 10px auto;
   padding: 10px 0;
   display: flex;
@@ -81,8 +83,8 @@ form {
 }
 
 fieldset {
-    border: none;
-    padding: 0;
+  border: none;
+  padding: 0;
 }
 
 legend {
@@ -96,6 +98,7 @@ label {
   font-size: .875rem;
   font-weight: 300;
 }
+
 
 label::after {
   content: "";
@@ -156,9 +159,10 @@ input[type="checkbox"]:hover {
   font-weight: 300;
   font-style: italic;
   padding-right: 1rem;
- }
+}
 
- :-moz-placeholder { /* older Firefox*/
+:-moz-placeholder {
+  /* older Firefox*/
   font-size: .7rem;
   color: #bbb;
   text-align: right;
@@ -167,7 +171,8 @@ input[type="checkbox"]:hover {
   padding-right: 1rem;
 }
 
-::-moz-placeholder { /* Firefox 19+ */
+::-moz-placeholder {
+  /* Firefox 19+ */
   font-size: .7rem;
   color: #bbb;
   text-align: right;
@@ -182,8 +187,8 @@ input[type="checkbox"]:hover {
   text-align: right;
   font-weight: 300;
   font-style: italic;
- padding-right: 1rem;
- }
+  padding-right: 1rem;
+}
 
 select {
   height: 50px;
@@ -196,21 +201,25 @@ select {
   background-position: right center;
 }
 
+
 /*---- Zip code box styling ----*/
+
 input[id="zip"] {
-  width: 50%;
+  width: 180px;
   margin-bottom: 10px;
 }
 
+
 /*---- Submit button styling ----*/
+
 input:hover[type="submit"] {
-background: #ffb6c1;
+  background: #ffb6c1;
 }
 
 input:focus,
 select:focus,
 textarea:focus {
-  border: 2px solid #455769;
+  border: 2px inset #455769;
   transition: border 0.5s ease;
 }
 
@@ -224,7 +233,9 @@ textarea:focus {
   display: block;
 }
 
+
 /* ---- unchecked radio button--huge thanks to classmate Meg Matty! ---- */
+
 [type="radio"] + label:before {
   content: '';
   display: inline-block;
@@ -241,7 +252,9 @@ textarea:focus {
   transition: box-shadow 0.5s ease, background-color 0.5s ease;
 }
 
+
 /* ---- checked radio button ---- */
+
 [type="radio"]:checked + label:before {
   border: 3px solid white;
   background: #416588;
@@ -250,7 +263,9 @@ textarea:focus {
   height: .5em;
 }
 
+
 /* ---- unchecked checkbox ---- */
+
 [type="checkbox"] + label:before {
   content: '';
   display: inline-block;
@@ -267,7 +282,9 @@ textarea:focus {
   transition: box-shadow 0.5s ease, background-color 0.5s ease;
 }
 
+
 /* ---- checked checkbox ---- */
+
 [type="checkbox"]:checked + label:before {
   content: url(../images/checkmark.png);
   box-shadow: 0 0 0 0.15em #416588;
@@ -275,7 +292,9 @@ textarea:focus {
   height: 1em;
 }
 
+
 /* ---- submit button styling ---- */
+
 button[type="submit"] {
   content: '';
   display: inline-block;
@@ -293,7 +312,9 @@ button[type="submit"] {
   transition: background-color 0.5s ease;
 }
 
+
 /* ---- submit button hover ---- */
+
 button[type="submit"]:hover {
   background-color: #3f9994;
 }
@@ -310,10 +331,36 @@ footer {
   font-style: italic;
 }
 
-/* ==== Media Queries ==== */
+/* ==== Media Query 760px ==== */
 
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 760px) {
 
+  legend {
+    padding-top: 30px;
+  }
 
+.contact label {
+  float: left;
+  margin-top: 14px;
+  width: 25%;
+}
+
+.contact input,
+select {
+  width: 75%;
+  float: left;
+}
+
+/*---- Zip code box styling ----*/
+
+input[id="zip"] {
+  width: 180px;
+  margin-bottom: 10px;
+}
+
+textarea {
+  min-height: 110px;
+  max-width: 100%;
+}
 
 }
