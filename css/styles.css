@@ -240,7 +240,7 @@ input:hover[type="submit"] {
 input:focus,
 select:focus,
 textarea:focus {
-  border: 2px inset #455769;
+  border: 2px solid #455769;
   transition: border 0.5s ease;
 }
 
