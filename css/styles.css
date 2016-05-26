@@ -179,7 +179,6 @@ input[type="checkbox"]:hover {
   text-align: right;
   font-weight: 300;
   font-style: italic;
-  /*padding-right: 1rem;*/
 }
 
 :-moz-placeholder {
@@ -189,7 +188,6 @@ input[type="checkbox"]:hover {
   text-align: right;
   font-weight: 300;
   font-style: italic;
-  /*padding-right: 16px;*/
 }
 
 ::-moz-placeholder {
@@ -199,7 +197,6 @@ input[type="checkbox"]:hover {
   text-align: right;
   font-weight: 300;
   font-style: italic;
-  /*padding-right: 16px;*/
 }
 
 :-ms-input-placeholder {
@@ -208,7 +205,6 @@ input[type="checkbox"]:hover {
   text-align: right;
   font-weight: 300;
   font-style: italic;
-  /*padding-right: 1rem;*/
 }
 
 select {
