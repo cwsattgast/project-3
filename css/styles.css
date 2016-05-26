@@ -163,10 +163,16 @@ input[id="tel"]:hover,
 input[id="username"]:hover,
 input[id="password"]:hover,
 textarea:hover,
-select:hover,
 input[type="radio"]:hover,
 input[type="checkbox"]:hover {
   background: #ddd;
+}
+
+select:hover {
+  background-color: #ddd;
+  background-image: url(../images/down-arrow.png);
+  background-repeat: no-repeat;
+  background-position: right center;
 }
 
 .pw {
